@@ -13,13 +13,21 @@ const settings = {
     );
   },
 };
+const images = [
+  require('../Assest/1.jpg'),
+  require('../Assest/2.jpg'),
+  require('../Assest/3.jpg'),
+  require('../Assest/4.jpg'),
+  require('../Assest/5.jpg'),
+  require('../Assest/6.jpg')
+]
 export const Popular = () => {
   return (
     <div>
       <h2 style={{color:"white"}}>The Popular Recips</h2>
       <Slider {...settings}>
-        {[1,2,3,4,5,6,7].map((item,index) => {
-          return <div key={index}> <h3 style={{color:"white"}} >{item}</h3> </div>;
+        {images.map((item,index) => {
+          return <div key={index}> <img src={item} /> </div>;
         })}
       </Slider>
     </div>
